@@ -1,0 +1,21 @@
+<button (click)="withoutFilter()">ללא סינון</button>
+<br>
+<button (click)="filterByJobField()">סינון לפי תחום</button>
+<br>
+<label for="area">סינון לפי איזור</label>
+<br>
+<select name="area" id="area" [(ngModel)]="area" (change)="filterByArea()">
+    <option>צפון</option>
+    <option>דרום</option>
+    <option>מרכז</option>
+    <option>ירושלים</option>
+</select>
+
+<div id="jobs">
+    <div class="job" [ngStyle]="{'background-color':j.area == 'ירושלים' ? 'aquamarine' : '#78e0f4'}" *ngFor="let j of jobs">
+        <h6>{{j.jobName}}</h6>
+        <p>{{j.area}}</p>
+        <button (click)="showJob(j)" type="button">לפרטים נוספים</button>
+    </div>
+</div>
+<router-outlet></router-outlet>

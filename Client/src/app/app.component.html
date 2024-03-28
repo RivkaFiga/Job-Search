@@ -1,0 +1,15 @@
+
+<div id="nav">
+    <h2>{{today|date}}</h2>
+    <h3>
+        <span>שלום {{userName}}   |   </span>
+        <span [routerLink]="['alljobs']">מתחום {{userJobField}}   |   </span>
+        <span>מספר קו"ח ששלחת עד כה: {{cv}}</span>
+    </h3>
+    <a class="nav" [routerLink]="['login']"><img src="../assets/לוגו.png" height="100px"></a>
+    <a class="nav" [routerLink]="['alljobs']">רשימת משרות</a>
+</div>
+<router-outlet></router-outlet>
+<h2>:ליצירת קשר עם מנהל האפליקציה</h2>
+<h3>טלפון: 03-9999999</h3>
+<h3>example@example :מייל</h3>

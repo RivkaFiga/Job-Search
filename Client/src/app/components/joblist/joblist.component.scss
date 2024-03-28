@@ -1,0 +1,11 @@
+.job {
+    border-style: solid;
+    width: 200px;
+    margin: 10px;
+    height: 200px;
+}
+
+#jobs {
+    display: flex;
+    flex-wrap: wrap;
+}
